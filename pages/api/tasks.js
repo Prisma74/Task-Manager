@@ -22,6 +22,6 @@ export default function handler(req, res) {
     // Remove a task by its ID
     const { id } = req.body;
     tasks = tasks.filter(task => task.id !== id);
-    res.status(200).json({ message: 'Task deleted'});
+    res.status(200).json({ message: 'Task delete'});
   }
 }
