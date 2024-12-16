@@ -35,7 +35,7 @@ export default function handler(req, res) {
       // Eliminar una tarea
       const { deleteId } = req.query;
       tasks = tasks.filter((task) => task.id !== deleteId);
-      res.status(200).json({ message: "Tarea eliminada" });
+      res.status(200).json({ message: "Tare eliminada" });
       break;
     
     default: 
