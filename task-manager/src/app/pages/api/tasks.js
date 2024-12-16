@@ -39,7 +39,7 @@ export default function handler(req, res) {
       break;
     
     default: 
-    res.setHeader("Allow", ["GET", "POST", "PUT", "DELETE"]);
+    res.setHeader("Allow", ["GET", "POST", "PT", "DELETE"]);
     res.status(405).end(`Metodo ${method} no permitido`);
   }
 }
