@@ -25,7 +25,7 @@ export default function handler(req, res) {
       const { taskId, updateData } = req.body;
       const taskIndex = tasks.findIndex((task) => task.id === taskId);
       if (taskIndex === -1) {
-        return res.status(40).json({ error: "Tarea no encontrada" });
+        return res.status(404).json({ error: "Tarea no encontrada" });
       }
       tasks[taskIndex] = { ...tasks[taskIndex], ...updateData };
       res.status(200).json(tasks[taskIndex]);
