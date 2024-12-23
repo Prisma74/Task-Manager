@@ -31,7 +31,7 @@ export default function handler(req, res) {
       res.status(200).json(tasks[taskIndex]);
       break;
 
-    case "DELET":
+    case "DELETE":
       // Eliminar una tarea
       const { deleteId } = req.query;
       tasks = tasks.filter((task) => task.id !== deleteId);
