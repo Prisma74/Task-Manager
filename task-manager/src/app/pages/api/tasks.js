@@ -20,7 +20,7 @@ export default function handler(req, res) {
       res.status(201).json(newTask);
       break;
 
-    case "PU":
+    case "PUT":
       // Actualizar una tarea existente
       const { taskId, updateData } = req.body;
       const taskIndex = tasks.findIndex((task) => task.id === taskId);
